@@ -1,0 +1,82 @@
+// ===== looping single line typing effect =====
+const phrase = "Web Developer • Game Tester • Community Manager";
+let charIndex = 0;
+let isDeleting = false;
+
+function typePhraseLoop() {
+    const typingElement = document.getElementById("typing");
+    
+    if (!typingElement) return;
+
+    if (isDeleting) {
+        typingElement.innerHTML = phrase.substring(0, charIndex - 1);
+        charIndex--;
+    } else {
+        typingElement.innerHTML = phrase.substring(0, charIndex + 1);
+        charIndex++;
+    }
+
+    let speed = isDeleting ? 25 : 50;
+
+    if (!isDeleting && charIndex === phrase.length) {
+        speed = 2500; 
+        isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        speed = 600; 
+    }
+
+    setTimeout(typePhraseLoop, speed);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    typePhraseLoop();
+});
+
+
+// ===== scroll to projects =====
+function scrollToProjects(){
+    const projectsSection = document.getElementById("projects");
+    if (projectsSection) {
+        projectsSection.scrollIntoView({ behavior: "smooth" });
+    }
+}
+
+
+// ===== scroll reveal animation =====
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+        }
+    });
+}, { threshold: 0.15 });
+
+document.querySelectorAll(".reveal").forEach(el => {
+    observer.observe(el);
+});
+
+
+
+const links = document.querySelectorAll(".navlink");
+
+window.addEventListener("scroll", () => {
+    let fromTop = window.scrollY;
+
+    links.forEach(link => {
+        const href = link.getAttribute("href");
+        const section = document.querySelector(href);
+
+        if (section) {
+            const sectionTop = section.offsetTop - 120; 
+            const sectionHeight = section.offsetHeight;
+
+            if (fromTop >= sectionTop && fromTop < sectionTop + sectionHeight) {
+                link.classList.add("active");
+            } else {
+                link.classList.remove("active");
+            }
+        }
+    });
+});
+

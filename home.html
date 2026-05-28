@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  emailjs.init("FDd1a5dXmH0UVX7TC");
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sTucKeD - Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=300;400;500;600&family=Manrope:wght=300;400;500;600&family=Playfair+Display:wght@400;500;600&family=Poppins:wght=300;400;500&display=swap" rel="stylesheet">
+    
+    <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="bg-blobs">
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+</div>
+
+<nav>
+    <div><b>PORTFOLIO</b></div>
+    <div>
+        <a href="#home" class="navlink">Home</a>
+        <a href="#about" class="navlink">About</a>
+        <a href="#skills" class="navlink">Skills</a>
+        <a href="#projects" class="navlink">Works</a>
+        <a href="#contact" class="navlink">Contact</a>
+    </div>
+</nav>
+
+<section class="hero" id="home">
+    <h1><span>sTucKeD</span> this side!</h1>
+    <div class="typing" id="typing"></div>
+    <button class="btn" onclick="scrollToProjects()">
+        View Work
+    </button>
+</section>
+
+<section id="about" class="reveal">
+    <h2>About Me</h2>
+    <p>
+        Hello! I build practical tools and safe spaces for gamers as a developer, tester and community manager.
+        <br><br>
+        <b>Web Development:</b> I create user-friendly game websites, detailed player guides, and interactive item value lists using HTML, CSS, and JavaScript. <br><br>
+        <b>Testing & QA:</b> I playtest games, including many Roblox games for bugs, to test features, and to give developers feedback to improve gameplay. <br><br>
+        <b>Moderation:</b> I manage and moderate gaming or community servers, ensuring they are safe, organized and welcoming for the community.
+    </p>
+</section>
+
+<section id="skills" class="reveal">
+    <h2>Skills</h2>
+    <div class="skills">
+        <div class="skill">
+            <h3>Frontend Development</h3>
+            <p>HTML5, CSS3, JavaScript (ES6+), Responsive Web Design</p>
+        </div>
+        <div class="skill">
+            <h3>Testing & QA</h3>
+            <p>Games testing, Bug hunting, Feedback, in-game moderation</p>
+        </div>
+        <div class="skill">
+            <h3>Community Ops</h3>
+            <p>Discord Server Moderation, Community management, Event Organization</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="reveal">
+    <h2>Works</h2>
+    
+    <div class="project-group">
+        <h3 class="group-title">Web Development</h3>
+        <div class="projects-grid">
+            <div class="card">
+                <div class="card-banner">
+                    <div class="card-stats">
+    <div class="stat">
+        <span class="stat-label">Total visits</span>
+        <span class="stat-value">90k+</span>
+    </div>
+</div>
+                    <img src="tapsim1.jpg" alt="Tap Value System">
+                </div>
+                <div class="card-content">
+                    <h3>Tap Simulator Valuelist</h3>
+                    <ul class="card-points">
+                        <li>Tap simulator value tracking platform built with a clean UI.</li>
+                        <li>Regularly updating databases for item values and trading stats.</li>
+                        <li>Officialy used by Tap simulator community.</li>
+                    </ul>
+                    <div class="card-action">
+                        <a href="https://tap-invalues.github.io/" target="_blank" class="project-link">
+                            Preview website <span>→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-group">
+        <h3 class="group-title">Game Testing & QA</h3>
+        <div class="projects-grid">
+            <div class="card">
+                <div class="card-banner">
+                    <div class="card-stats">
+    <div class="stat">
+        <span class="stat-label">Highest CCU</span>
+        <span class="stat-value">205k+</span>
+    </div>
+</div>
+                    <img src="tapsim1.jpg" alt="Tap Simulator">
+                </div>
+                <div class="card-content">
+                    <h3>Tap Simulator</h3>
+                    <ul class="card-points">
+                        <li>Worked as a Senior Tester for the Roblox game Tap Simulator.</li>
+                        <li>Duration - 2 to 3 months.</li>
+                       
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-banner">
+                   <div class="card-stats">
+    <div class="stat">
+        <span class="stat-label">Highest CCU</span>
+        <span class="stat-value">154k+</span>
+    </div>
+</div>
+                    <img src="sqx.jfif" alt="Squid Game X">
+                </div>
+                <div class="card-content">
+                    <h3>Squid Game X</h3>
+                    <ul class="card-points">
+                        <li>Worked as a Game Tester and in-game moderator for the Roblox game Squid Game X.</li>
+                        <li>Duration - 1 month.</li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-banner">
+                 <div class="card-stats">
+    <div class="stat">
+        <span class="stat-label">Highest CCU</span>
+        <span class="stat-value">15k+</span>
+    </div>
+</div>
+                    <img src="yt.webp" alt="Sutin's Studio">
+                </div>
+                <div class="card-content">
+                    <h3>Sutin's Studio</h3>
+                    <ul class="card-points">
+                        <li>Sole tester for newly published games. </li>
+                        <li>Duration - 3 to 4 weeks</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-group">
+        <h3 class="group-title">Community Moderation</h3>
+        <div class="projects-grid">
+            <div class="card">
+                <div class="card-banner">
+                    <div class="card-stats">
+    <div class="stat">
+        <span class="stat-label">Members</span>
+        <span class="stat-value">250k+</span>
+    </div>
+</div>
+                    <img src="tapsim1.jpg" alt="Community Server Setup">
+                </div>
+                <div class="card-content">
+                    <h3>Tap Simulator</h3>
+                    <ul class="card-points">
+                        <li>Moderated the Tap Simulator discord community server and assisted players. </li>
+                        <li>Duration - 1 month</li>
+                       
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section id="contact" class="reveal">
+  <h2>Contact</h2>
+
+  <div class="connect-box">
+    <h3>Connect</h3>
+    <div class="discord-card">
+    <span class="discord-label">Discord Username</span>
+    
+    
+    <span class="discord-username" id="discordText">stucked_dev</span>
+
+    <button class="copy-btn" onclick="copyDiscord()">Copy</button>
+ </div>
+ 
+</div>
+
+<h4 class="contact-box">
+  Drop your info so I can reach you.
+</h4>
+
+  <form id="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+
+    <input type="email" name="email" placeholder="Your Email" required>
+
+    <textarea name="message" rows="5" placeholder="Message" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+  </form>
+</section>
+
+<footer>
+ All images used are owned by their respective developers and are used for demonstration purposes only. <br><br> © 2026 | Built with ❤️ by sTucKeD
+</footer>
+
+<script src="script.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+  emailjs.init("FDd1a5dXmH0UVX7TC");
+
+  document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      "service_j2unams",
+      "template_yfw0cga",
+      this
+    ).then(() => {
+      alert("Message sent successfully!");
+      this.reset();
+    }).catch((error) => {
+      alert("Failed to send message");
+      console.log(error);
+    });
+  });
+</script>
+
+<script>
+    function copyDiscord(){
+    const text = document.getElementById("discordText").innerText;
+
+    navigator.clipboard.writeText(text).then(() => {
+        alert("Discord username copied!");
+    }).catch(err => {
+        console.log("Copy failed", err);
+    });
+}
+</script>
+
+</body>
+</html>
