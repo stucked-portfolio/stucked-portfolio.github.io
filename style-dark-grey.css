@@ -1,0 +1,201 @@
+
+:root{
+    --bg:#121212;
+    --bg-secondary:#181818;
+    --surface:#1f1f1f;
+    --surface-hover:#252525;
+    --border:#323232;
+
+    --text:#f3f3f3;
+    --text-soft:#b0b0b0;
+    --text-muted:#8b8b8b;
+
+    --accent:#8f8f8f;
+    --accent-light:#b5b5b5;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+    font-family:"Inter",sans-serif;
+    font-weight:300;
+    letter-spacing:.1px;
+}
+
+.bg-blobs,
+.blob{
+    display:none;
+}
+
+h1,h2,nav b{
+    font-family:"Manrope",sans-serif;
+    font-weight:500;
+}
+
+p{
+    color:var(--text-soft);
+    line-height:1.7;
+}
+
+.hero span{
+    color:#d0d0d0;
+}
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px min(6%,60px);
+    background:rgba(18,18,18,.95);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+    z-index:1000;
+}
+
+nav a{
+    color:var(--text-muted);
+    text-decoration:none;
+    margin-left:30px;
+    transition:.25s;
+}
+
+nav a:hover,
+nav a.active{
+    color:var(--text);
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:0 24px;
+}
+
+.typing{
+    color:var(--text-soft);
+}
+
+.btn{
+    margin-top:35px;
+    padding:14px 32px;
+    border:1px solid #555;
+    background:transparent;
+    color:var(--text);
+    border-radius:8px;
+    transition:.25s;
+}
+
+.btn:hover{
+    background:#2b2b2b;
+    transform:translateY(-2px);
+}
+
+section{
+    padding:120px min(6%,60px);
+    max-width:1200px;
+    margin:auto;
+}
+
+h2{
+    color:var(--text);
+    margin-bottom:35px;
+}
+
+h2::after{
+    content:'';
+    display:block;
+    width:50px;
+    height:2px;
+    background:#666;
+    margin-top:8px;
+}
+
+.group-title{
+    border-left:3px solid #666;
+    padding-left:14px;
+    color:var(--text-soft);
+}
+
+.skill,
+.card,
+.discord-card{
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:12px;
+}
+
+.skill:hover,
+.card:hover,
+.discord-card:hover{
+    background:var(--surface-hover);
+}
+
+.card{
+    overflow:hidden;
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+}
+
+.card-banner{
+    border-bottom:1px solid var(--border);
+}
+
+.card-content h3{
+    color:var(--text);
+}
+
+.card-points li{
+    color:var(--text-soft);
+}
+
+.card-points li::before{
+    color:#8a8a8a;
+}
+
+.project-link{
+    color:#cfcfcf;
+}
+
+.project-link:hover{
+    color:white;
+}
+
+#contact input,
+#contact textarea{
+    background:var(--surface);
+    border:1px solid var(--border);
+    color:white;
+}
+
+#contact input:focus,
+#contact textarea:focus{
+    border-color:#666;
+    background:var(--surface-hover);
+}
+
+footer{
+    border-top:1px solid var(--border);
+    color:var(--text-muted);
+}
+
+/* keep your existing responsive rules */
