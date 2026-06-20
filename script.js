@@ -80,3 +80,45 @@ window.addEventListener("scroll", () => {
     });
 });
 
+
+// ===== LIVE DISCORD STATUS (Lanyard API) =====
+// Replace DISCORD_USER_ID with your real Discord user ID.
+// Requires joining the Lanyard Discord server: https://discord.gg/lanyard
+const DISCORD_USER_ID = "979280490261532732";
+
+const STATUS_LABELS = {
+    online: "Online",
+    idle: "Idle",
+    dnd: "Do Not Disturb",
+    offline: "Offline"
+};
+
+async function updateDiscordStatus(){
+    const badge = document.getElementById("discordStatus");
+    const label = document.getElementById("discordStatusText");
+    if (!badge || !label) return;
+
+    try {
+        const res = await fetch(`https://api.lanyard.rest/v1/users/${DISCORD_USER_ID}`);
+        const json = await res.json();
+
+        if (!json.success) throw new Error("Lanyard: user not found in cache");
+
+        const status = json.data.discord_status || "offline";
+
+        badge.classList.remove("is-online", "is-idle", "is-dnd", "is-offline");
+        badge.classList.add(`is-${status}`);
+
+        label.textContent = STATUS_LABELS[status] || "Unknown";
+    } catch (err) {
+        badge.classList.remove("is-online", "is-idle", "is-dnd");
+        badge.classList.add("is-offline");
+        label.textContent = "Status unavailable";
+        console.log("Discord status fetch failed:", err);
+    }
+}
+
+if (document.getElementById("discordStatus")){
+    updateDiscordStatus();
+    setInterval(updateDiscordStatus, 60000); // refresh every 60s
+}
