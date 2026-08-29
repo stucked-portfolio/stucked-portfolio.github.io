@@ -237,10 +237,8 @@ h2::before{
     font-weight: 600;
 }
 
-#about h2::before{ content: "01"; }
-#skills h2::before{ content: "02"; }
-#projects h2::before{ content: "03"; }
-#contact h2::before{ content: "04"; }
+#projects h2::before{ content: "01"; }
+#contact h2::before{ content: "02"; }
 
 section > h2 + p,
 section > h2 ~ .skills,
