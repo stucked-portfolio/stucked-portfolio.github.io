@@ -1,5 +1,5 @@
 // ===== looping single line typing effect =====
-const phrase = "Web Developer • Game Tester • Community Manager";
+const phrase = "Building something....";
 let charIndex = 0;
 let isDeleting = false;
 
